@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="sortcut icon" href="htmlcss.png" type="image/png" />
+    <title>Guia de estudo HTML + CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="vemTopo"></div>
+<body>
+    <nav id="menuSuperior">
+        <ul>
+            <li><a href="#basicoHTML">Básico|</a></li>
+            <li><a href="#netflixBody">Pensando no projeto|</a></li>
+            <li><a href="#boxModelBody">Box model|</a></li>
+            <li><a href="#listasEMenusBody">Listas e menus|</a></li>
+            <li><a href="#tabelasBody">Tabelas|</a></li>
+            <li><a href="#formulariosBody">Formulários|</a></li>
+        </ul>
+    </nav>
+    <nav id="menuSuperior2">
+        <ul>        
+            <li><a href="#seletores">Pseudo-classes|</a></li>
+            <li><a href="#displayFloatBody">Display e Float|</a></li>
+            <li><a href="#coresBody">Cores|</a></li>
+            <li><a href="#positionBody">Position|</a></li>
+            <li><a href="#breakPointBody">BreakPoint| </a></li>
+            <li><a href="#flexBoxBody">FlexBox|</a></li>
+            <li><a href="#gridBody">Grid</a></li>
+        </ul>
+    </nav>
+    <div id="basicoHTML" class="tituloDiv">
+        <h1>Básico HTML</h1><br><br>        
+        <a href="https://caniuse.com" target="blank">
+            <p class="destaque">Testar se determinado elemento funciona em todos navegadores. </p>
+        </a><br><br>
+        <p class="destaque">Inserir icone na aba do navegador: </p><br>
+        <img src="insereIconAba.JPG"><br><br>
+        <hr>
+        <h3> Atalhos no VS </h3><br>
+        <p class="destaque">Comentar um bloco de código no VS = shift + alt + a, só um linha = ctrl + ;</p><br>
+		<p class="destaque">Identar código no vs </p>Shift + alt + f = format document.<br>
+        <p class="destaque">Abrir caixa de dialogo no vs </p>ctrl + shift + p.<br>
+        <p class="destaque">Parar execução de código no vs </p>ctrl + alt + m.<br>
+        <p>Alt + z quebra linha no VS</p>
+        <p>Ctrl + barra de espaço - permite selecionar e comentar etc, tipo um surround with</p>
+        <p>ctrl + u - abre o código fonte da página </p><br>
+        <hr><br>
+        <p>validador - <b>https://validator.w3.org</b></p>
+        <br>
+        <a href="https://www.youtube.com/watch?v=XXUEFueOsAs"
+            target="blank">
+            Animação só com html e css, exemplo aplicado na paris.
+        </a>
+        <br><br>
+        <b>tag b de bold deixa em negrito</b><br><br>
+        <p>Inputs funcionam fora de formulários tambem. ex.:
+            <input type="text">
+        </p><br><br>
+        <p>Posso colocar o mesmo nome na ID e na CLASS, dai eu uso a ID pra referencia e 
+            a CLASS para estilizar ;)<br><br>
+        </p>
+        <strong>Também deixa em negrito mas semanticamente é diferente</strong>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong" target="blank">
+            STRONG no MDN
+        </a><br><br>
+        <p>Links ancoras <a href="#displayFloatBody">Aula Dislpay e Float</a></p><br>
+        - Usamos um link (a) com o href apontando para a id da div que queremos ir com o # na frente.
+        assim: (a href="#displayFloatBody"). <br><br>
+        Logo podemos ter um menu com as sessões conforme abaixo.<br><br>
+        - Caso queiramos que essa ida ate a div seja mais lenta, podemos usar
+        a opção scroll-behavior: smooth; dentro da tag html no css.
+        
+        <br><br>
+        <hr>
+        <p><b>hr</b> insere uma linha (full-width)</p>
+        <hr>
+        <br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/span" target="blank">
+            SPAN
+        </a>
+        <p class="centro">Span é inline</p><br>
+        <hr>
+        <br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/div" target="blank">
+            DIV
+        </a>
+        <p class="centro">div é block (bloco por padrão)</p>
+        <br>
+        <hr>
+        <br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element" target="blank">
+            Tags HTML
+        </a><br>
+        <br>
+        <hr>
+        <br>
+        <h2>ctrl + u abre o código fonte da página</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Odit, earum expedita cum consequatur,
+            sequi adipisci nulla explicabo optio delectus libero
+            enim cumque beatae a nobis voluptatibus,
+            placeat dolorem consequuntur architecto.</p>
+        <br>
+        <hr>
+        <br>
+        <p><b>Viewport é responsável pela responsividade em dispositivos móveis</b></p><br><br>
+
+        <div id="bloco">
+            <div id="bloco2"></div>
+            <div id="bloco3"></div>
+            <div id="bloco4"></div>
+            <div id="bloco5">
+                <p id="paragraf"></p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h1>Pensando no projeto</h1>
+    <div id="netflixBody">
+        <header id="heading">
+            <div>
+                <h1 class="h1">
+                    <a href="#">Netflix</a>
+                </h1>
+
+                <h2 class="h1">
+                    <a href="#">Netflix</a>
+                </h2>
+            </div>
+        </header>
+    </div>
+    <hr>
+    <div id="boxModelBody" class="tituloDiv">
+        <h1>BOX model</h1><br><br>
+        <p><b>Anotações da aula 560 - CSS e box-model<br><br>
+                - A section meio que exige um heading dentro dela,
+                senão fica dando warning no validador<br>
+                - Sessão é um box (bloco) por padrão ele é full-width
+                mas a altura não é pré definida<br>
+                - A margin entre dois elementos não se soma, ela é
+                tipo 'sobreposta', prevalecendo a maior<br>
+                - Posso passar valores do padding/margin das seguintes formas:<br>
+                &nbsp; - os 4 lados com 10px = padding: 10px;<br>
+                &nbsp; - cima e baixo 15px e direita esquerda 10 = padding: 15px 10px;<br>
+                &nbsp; - cima 10px direita 5px baixo 15px esquerda 7px = padding: 10px 5px 15px 7px; 'sentido
+                horário'<br>
+                &nbsp; - se eu deixar algum valor em branco ele atribui 0, assim se quero cima 10px baixo 10 direita e
+                esquerda 0,
+                posso passar assim = padding: 10px 0 10px;<br><br>
+                <p class="centro">------------------------------------------------------------------------------<br><br>
+                
+                <h1>Aula 579 - Propriedades especificas (largura, altura, padding, border e margin)</h1><br>
+                - Configuração de tamanho, cor de fundo etc não é aplicada se o display tiver como inline.<br>
+                - O display block (só pra reforçar) é full-width por padrão.<br><br>
+                -<p class="destaque">Overflow</p> - Controla o comportamento de elementos que 'transbordam a lista'
+                  se eu colocar overflow: hidden; por exemplo, o exedente sera ocultado.<br>
+                  O overflow tem o controle especifico ainda sobre o eixo x (horizontal) e 
+                  eixo y (vertical) (overflow-x ou overflow-y)<br>
+                  - Opção scroll - coloca uma barra de rolagem no eixo correspondente do excedente.<br>
+                  porem se não exceder ele continua com a barra de rolagem, para corrigir isso usamos<br>
+                  o overflow: auto; dai ele só coloca a barra se o conteudo exceder.<br><br>
+                  - <p class="destaque">Responsividade</p> - Podemos controlar a largura com um width de 100%
+                  , e o max-widht de 1200 (tela de um pc grande), dai
+                  se a tela for maior que isso tbem ele para no 1200.<br>
+                  - para ajustar ao meio ao expandir, controlamos com a margin: 0 auto;<br>
+                  - Com o heigth é a mesma coisa.<br>
+                  - Se eu setar tanto o width/height e o max-width/height para 100% ele/s pegam a dimensão da viewport.<br>
+                  - Min-width/height funciona da mesma forma, porem com o min-height: o; por exemplo,
+                    se eu não tiver conteudo dentro da div ela não sera exibida, ja se eu setar um min-height
+                    ela aparecera (daquele tamanho) mesmo em branco (sem conteúdo).<br><br>
+                -<p class="destaque">box-sizing: content-box;</p> tudo relacionado a largura e altura vai ser tratado
+                apenas NO CONTEÚDO, isso quer dizer que borda, margin, padding etc, serão SOMADOS ao conteúdo, 
+                conforme esta acontecendo com as bordas entre as divs abaixo.
+                  <br><br>
+                -<p class="destaque">box-sizing: padding-box;</p> - A diferença é que no padding-box ele é somado 'pra dentro'<br><br>
+                -<p class="destaque">box-sizing: border-box;</p> - Melhor forma de usar, tanto que ja setamos isso
+                no geral (*{}) pois tudo que configurarmos (padding, border etc) vai se delimitar ao tamanho da div.
+                só não entra a margin porque a margin é sempre 'pra fora' do conteúdo
+                <br><br>
+                -<p class="destaque">Margin vs padding</p> - Só pra reforçar a margin 'empurra' o que ta ao redor
+                (separa um elemento do outro) pois ela é externa e o padding 'empurra pra dentro'
+                 do box-model (do mesmo elemento).<br><br>
+
+                <div class="exemplosBoxModel">
+                    <h1>Lorem</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Exercitationem repudiandae amet, explicabo laudantium saepe,
+                          unde ex officia libero, laboriosam eum nostrum impedit
+                           expedita quas doloribus nulla molestiae totam quo.
+                            Optio? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Exercitationem repudiandae amet, explicabo laudantium saepe,
+                             unde ex officia libero, laboriosam eum nostrum impedit
+                              expedita quas doloribus nulla molestiae totam quo.
+                               Optio? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                               Exercitationem repudiandae amet, explicabo laudantium saepe,
+                                unde ex officia libero, laboriosam eum nostrum impedit
+                                 expedita quas doloribus nulla molestiae totam quo.
+                                  Optio?</p>
+                </div>
+                <div class="exemplosBoxModel"></div>
+                <div class="exemplosBoxModel">
+                    <h1>Lorem</h1>
+                    <p>Aqui ela ta exibindo o tamanho do min-height, mesmo o conteúdo sendo menor
+                        que isso</p>
+                </div>
+            </b></p><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model"
+            target="blank">
+            Box model in MDN
+        </a>
+        <img src="box-model.JPG" alt="padrões box-model pela MDN">
+
+        <section class="section-one">
+            <h4>Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Optio placeat quasi autem neque consectetur
+                porro eos minus culpa ut ab possimus cum unde,
+                necessitatibus fugit dolores vitae numquam,
+                magni sapiente?</h4>
+        </section>
+        <section class="section-two">
+            <h4>2</h4>
+        </section>
+    </div>
+    <hr>
+    <div id="listasEMenusBody">
+        <h1>Listas e menus</h1><br><br>
+        <p><b> Anotações da aula 561 - Listas e Menus<br><br>
+                - nav assim como section e containners de conteúdo,
+                tem display block por padrão, e o display block é
+                full-width tbem por padrão
+            </b></p><br>
+        &nbsp; <a href="https://www.w3schools.com/html/html_lists.asp" target="blank">
+            Lists in w3Schools
+        </a><br><br>
+        <nav>
+            <ul>
+                <li><a class="menu" href="#">Home</a></li>
+                <li><a class="menu" href="#">Sobre</a></li>
+                <li><a class="menu" href="#">Produtos</a></li>
+            </ul>
+        </nav>
+        <ul class="listas">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <ol class="listas" type="1" start="5">
+            <li>Item 2</li>
+            <li>Item 1</li>
+            <li>Item 3</li>
+        </ol>
+
+        <dl class="listas">
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+
+        <p class="destaque">Menu com vários submenus</p><br><br>
+        <a href="https://www.todoespacoonline.com/w/2014/10/menu-html-com-css-com-submenu-e-subniveis/" target="blank">
+            dica do luiz nesse link
+        </a><br><br>
+        <div class="menu-container">
+            <ul class="menu clearfix">
+                <li>
+                    <a href="#">Menu do luiz</a>
+    
+                    <ul class="sub-menu clearfix">
+                        <li>
+                            <a href="#">Sub</a>
+        
+                            <ul class="sub-menu">
+                                <li>
+              
+                                    <a href="#">Sub Sub</a>
+            
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Sub Sub</a></li>
+                                        <li><a href="#">Sub Sub</a></li>
+                                        <li><a href="#">Sub Sub</a></li>
+                                        <li><a href="#">Sub Sub</a></li>
+                                        <li><a href="#">Sub Sub</a></li>
+                                    </ul>
+              
+                                </li>
+                                <li><a href="#">Sub Sub</a></li>
+                                <li><a href="#">Sub Sub</a></li>
+                                <li><a href="#">Sub Sub</a></li>
+                                <li><a href="#">Sub Sub</a></li>
+                            </ul>
+        
+                        </li>
+                        <li><a href="#">Sub</a></li>
+                        <li><a href="#">Sub</a></li>
+                        <li><a href="#">Sub</a></li>
+                        <li><a href="#">Sub</a></li>
+                        <li><a href="#">Sub</a></li>
+                    </ul>
+                </li>
+            </ul>        
+        </div>
+        
+
+
+    </div>
+    <hr>
+    <div id="tabelasBody">
+        <h1>Tabelas</h1><br><br>
+        <p><b>Anotações da aula 562 - Tabelas<br><br>
+                <p class="destaque">- colspan="3"</p>seta a quantidade de colunas
+                que eu quero que aquele conteúdo ocupe<br>
+                - <p class="destaque">rowspan="2"</p>seta a quantidade de linhas
+                que eu quero que aquele conteúdo ocupe<br>
+                - lembrando sempre de eliminar a linha ou coluna
+                que o colspan ou rowspan ira ocupar <br>
+                - para deixar uma div inteira responsiva, podemos
+                setar o max-width dela para 100% e usar a propriedade
+                overflow-x: auto; onde x é o 'eixo' horizontal<br>
+            </b></p><br><br>
+        <a href="https://www.w3schools.com/html/html_tables.asp" target="blank">
+            Tabelas in w3Schools
+        </a><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/table" target="blank">
+            Tabelas in MDN
+        </a><br><br>
+        <table>
+            <caption>Descrição da tabela</caption>
+            <thead>
+                <tr>
+                    <th>Título 1</th>
+                    <th>Título 2</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td rowspan="4">R$ 7000</td>
+                </tr>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                </tr>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                </tr>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Rodapé da tabela</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="responsive-table">
+            <table class="tabela2">
+                <caption>Tabela responsiva</caption>
+                <thead>
+                    <tr>
+                        <th>Título 1</th>
+                        <th>Título 2</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Corpo 1</td>
+                        <td>Corpo 2</td>
+                        <td rowspan="4">R$ 7000</td>
+                    </tr>
+                    <tr>
+                        <td>Corpo 1</td>
+                        <td>Corpo 2</td>
+                    </tr>
+                    <tr>
+                        <td>Corpo 1</td>
+                        <td>Corpo 2</td>
+                    </tr>
+                    <tr>
+                        <td>Corpo 1</td>
+                        <td>Corpo 2</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Rodapé da tabela</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <div id="formulariosBody">
+        <h1>Formulários</h1><br><br>
+        <p><b> Anotações da aula 563 - Formulários<br><br>
+                -<p class="destaque">ESTRITAMENTE PROIBIDO</p> colocar um formulário dentro de outro.<br>
+                - fieldset é um agrupamento de campos<br>
+                - name e value é o que chega no servidor/email/etc (dependendo pra onde vc vai mandar esse form)
+                e value é o que a pessoa digita no input e manda. <br>
+                - botão do type 'reset' limpa os campos que foram preenchidos pro padrão.<br>
+                - label é clicavel, isso é importante semanticamente e em uso mobile,
+                pois ao clicar no label ele ja abre o campo editavel.
+                para funcionar corretamente tem que colocar o cursor: poiter no css do label.<br>
+                - agrupamos caixa de seleção do tipo 'radio' pelo name (colocando o mesmo name para cada opção),
+                assim ele não deixa selecionar mais de uma opção como na checkbox.<br>
+                - type='file' permite envio de arquivos<br>
+                - accept define o formato do arquivo<br>
+                - multiple define se pode enviar mais de 1 ou não.<br>
+                - number (min="10" max="50" step="5") limita o preenchimento entre 10 e 50 e pula de 5 em 5 (nas setas
+                do campo)<br>
+                - no textarea 'cols' é igual ao nº de caracteres em cada linha e 'rows' o nº de linhas.<br>
+            </b></p><br><br>
+        <a href="https://www.w3schools.com/html/html_forms.asp" target="blank">
+            Formulários in w3Schools.
+        </a><br><br>
+        <a href="https://www.w3schools.com/html/html_form_input_types.asp" target="blank">
+            HTML input types in w3Schools.
+        </a><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Forms/How_to_structure_a_web_form" target="blank">
+            Semantica em forms in MDN.
+        </a><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/form" target="blank">
+            Formulários in MDN.
+        </a><br><br>
+
+        <form action="#" method="GET" target="_blank" autocomplete="off">
+            <br><br>
+            <h2>Cabesssa</h2>
+            <p>O formulário</p>
+            <fieldset>
+                <legend>Descrição</legend>
+                <p id="texto">
+                    <label id="digitaNome" for="nome"><b>Nome:</b></label>
+                    <input type="text" placeholder="Felipe" id="nome" name="nome" required>
+                </p>
+                <p>
+                    <label for="dev">Sou um dev</label>
+                    <input type="checkbox" id="dev" value="sim"><br>
+                    <label for="dev1">Foda pra caralho</label>
+                    <input type="checkbox" id="dev1" value="sim" checked><br>
+                    <label for="dev2">Deveria ganhar R$ 10.000</label>
+                    <input type="checkbox" id="dev2" value="sim"><br>
+                </p>
+                <br><br>
+                <p>
+                <h2>Gênero:</h2>
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="feminino" value="feminino" name="genero"><br>
+                <label for="masc">Masculino</label>
+                <input type="radio" id="masc" value="masculino" name="genero"><br>
+                <label for="feliz">Feliz</label>
+                <input type="radio" id="feliz" value="feliz" name="genero"><br>
+                <label for="mtoFeliz">Muito Feliz</label>
+                <input type="radio" id="mtoFeliz" value="mtoFeliz" name="genero" checked><br>
+
+                <br><br>
+                <p>
+                    <label for="date"><b>Date:</b></label>
+                    <input type="date" id="date" name="date">
+                </p>
+                <br><br>
+                <p>
+                    <label for="time"><b>Hora:</b></label>
+                    <input type="time" id="time" name="time">
+                </p>
+                <br><br>
+                <p>
+                    <label for="cor"><b>Cor preferida:</b></label>
+                    <input type="color" id="cor" name="cor" value="#ff0000">
+                </p>
+                <br><br>
+                <p>
+                    <label for="email"><b>Seu e-mail:</b></label>
+                    <input type="email" id="email" name="email" placeholder="ex.: email@email.com">
+                </p>
+                <br><br>
+                <p>
+                    <label for="file"><b>Sua foto:</b></label>
+                    <input type="file" id="file" name="file" accept=".png,.svg,image/*" multiple>
+                </p>
+                <br><br>
+                <p>
+                    <label for="number"><b>Number:</b></label>
+                    <input type="number" id="number" name="number" min="10" max="50" step="5"><br><br>
+                </p>
+                <p>
+                    <label for="password"><b>Senha:</b></label>
+                    <input type="password" id="password" name="password" required>
+                </p>
+                <br><br>
+                <p>
+                    <label for="range"><b>Avaliação:</b></label>
+                    <input type="range" id="range" name="range">
+                </p>
+                <br><br>
+                <p>
+                    <label for="select"><b>Selecione um estado:</b></label>
+                    <select id="select" name="select">
+                        <optgroup label="Centro-oeste">
+                            <option value="DF" label="DF">
+                            <option value="GO" label="GO" disabled>
+                        </optgroup>
+                        <optgroup label="Sudeste">
+                            <option value="RJ" label="RJ" selected>
+                            <option value="SP" label="SP">
+                        </optgroup>
+                        <optgroup label="Nordeste">
+                            <option value="MA" label="MA">
+                            </option>
+                    </select>
+                </p>
+                <br><br>
+                <p>
+                    <label for="textarea"><b>textearea:</b></label>
+                    <textarea id="textarea" name="textarea" rows="5" cols="80"></textarea>
+                </p>
+                <p>
+                    <button class="botao" type="reset">Limpar</button>
+                    <button class="botao" type="submit">Enviar</button>
+                </p>
+            </fieldset>
+
+        </form>
+        <br><br><br>
+        <hr>
+        <br>
+    </div>
+    <div id="seletores">
+        <h1>Seletores de atributos CSS</h1><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Attribute_selectors" target="blank">
+            Seletores de atributos CSS in MDN
+        </a><br><br><br><br>
+        <hr><br><br>
+        <h1>Pseudo-classes</h1><br><br>
+        <p><b>- Pseudo-classes são especificidades de uma classe, separadas por : como
+                o :hover :visited :required etc. Mais pseudo classes na documentação oficial abaixo<br>
+                - com isso eu posso mudar algum objeto de acordo com seu estado na página, ex
+                <input required> todo input que for required tera o fundo lilaz</b></p><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes" target="blank">
+            Pseudo-classes in MDN
+        </a><br><br>
+        <p>input focus <input type="text"></p><br><br>
+        <p>input desabilitado e com cursor 'proibido' <input type="text" disabled></p><br><br>
+        <p id="mudaTamanho">Muda de tamanho ao selecionar <input type="checkbox"></p><br><br>
+        <p>Usando seletor de atributo soma (assembly +) para alterar algum outro objeto ao selecionar o checkbox
+            no caso o fundo do paragrafo (p)</p><br>
+        <input type="checkbox">
+        <b>Muda cor do p ao selecionar o input 'checkbox'</b><br>
+        <br>
+        <p>Com o seletor de + ele só pega o imediatamente após, logo nesse p não acontece nada</p><br>
+        <br>
+        <h2>Emet no vs code:</h2><br>
+        <p><b>- ao criar uma tag * alguma coisa ele multiplica</b></p>
+        <p><b>ex.: para criar 3 li dentro da ul, eu digito li * 3 e dou enter. ao preencher
+                após cada item eu aperto tab que ele vai pro local certo de digitar (dentro da tag li)
+            </b></p><br><br>
+
+        <div class="pai">
+            <ul class="lista">
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul>
+        </div>
+        <div id="notMeio">
+            <h2>Exemplo do Pseudo-classes (pseudo-seletor) not:</h2><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="meio">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div id="alternaCorChequed">
+            <input type="checkbox">
+            <b>Muda cor do p ao selecionar o input 'checkbox'</b><br>
+            <br>
+        </div>
+        <br><br>
+        <hr><br><br>
+    </div>
+    <div id="pseudoElements">
+        <h1>Pseudo elementos</h1><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements" target="blank">
+            Pseudo elements in MDN
+        </a><br><br><br><br>
+        <h3>Muito usado para alterar o comportamento de algo especifico no objeto.<br>
+            Exemplo para mudar a primeira letra de um paragrafo</h3><br><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Natus consequuntur atque fugiat architecto velit consequatur alias illum,
+              exercitationem magni odio recusandae eum ut nihil ducimus itaque,
+               totam quasi vero voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Animi, voluptas iure? Officiis, alias, ex harum placeat numquam,
+                 voluptatibus doloremque ipsa adipisci cupiditate dicta nobis dolorum totam repellat.
+                  Natus, corrupti pariatur?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Natus consequuntur atque fugiat architecto velit consequatur alias illum,
+                   exercitationem magni odio recusandae eum ut nihil ducimus itaque,
+                    totam quasi vero voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Animi, voluptas iure? Officiis, alias, ex harum placeat numquam,
+                      voluptatibus doloremque ipsa adipisci cupiditate dicta nobis dolorum totam repellat.
+                       Natus, corrupti pariatur?</p>
+        <br><br>
+        <b>Exemplo com placeholder sem usar o input de seletor: <input type="text" placeholder="editado"></b>
+        <br><br>
+        <b id="maior">Especificidade - </b><b>Define a prioridade do que sera aplicado o CSS</b><br><br>
+        <a href="https://specificity.keegan.st" target="blank">
+            Calculador de especificidade .
+        </a><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity" target="blank">
+            Especificidade in MDN.
+        </a><br><br>
+        <a href="https://www.w3.org/TR/selectors-3/#specificity" target="blank">
+            Especificidade in w3Schools.
+        </a><br><br>
+        <b>ID &nbsp; Classe, atributos e pseudo-classes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Elementos e pseudo-elementos </b><br><br>
+        <b>1 &nbsp;&nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            1 0 0 - não é tão bom, qto menor melhor<br> 
+        </b>
+        <b>0 &nbsp;&nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            0 0 1 - desse jeito é o melhor dos mundos, qto menos especifico melhor 
+        </b><br><br> 
+    </div>
+    <hr>
+    <div class="tituloDiv">
+        <h1>Herança</h1><br><br>
+        <p><b> Anotações da aula 578 - Herança<br><br>
+            - Quando os estilos são herdados de pai para filhos etc.<br><br>
+             - initial - desabilito a herança e<br>
+            &nbsp;- inherit - ativo a herança (no css.).<br><br>
+        <a href="https://www.sitepoint.com/css-inheritance-introduction/" target="blank">
+            Site bom com exemplo.
+        </a><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance" target="blank">
+            Herança in MDN.
+        </a><br><br>
+        <a href="https://www.w3schools.com/cssref/css_inherit.asp" target="blank">
+            Herança in w3Schools.
+        </a><br><br>
+        
+        <hr>
+    </div>
+    <div id="displayFloatBody" class="tituloDiv">
+        <h1>Float e Display (block, inline-block e inline)</h1><br><br>
+        <p><b> Anotações da aula 580</b></p><br><br>
+            <p class="destaque">Float</p>- Quer dizer que um elemento vai usar 
+                apenas o espaço dele e liberar o restante pra outros.<br>
+            - As margens no display block entre 2 elementos se sobrepõe, ja no 
+            display float, elas usam e respeitam a de cada elemento (são somadas).<br>
+            - Visualização da margem float -<br> <img class="imgFloat" src="exemploMargemFloat.JPG"><br>
+            - Quando usamos o float dentro de outros elementos (eles perdem o tamanho).<br>
+            - Quando o alinhamento dos elementos é float: left; e sobre espaço a direita
+            (final do range) ficara um espaço nessa direita, dai se colocarmos um outro
+            elemento logo apos os que estão usando o float, ele ocupará esse espaço. 
+            Para resolver isso usamos o atributo<p class="destaque">clear: </p>left;
+            no caso pq o float é left tbem, esse novo elemento vai pra fora do float.<br>
+            posso usar o clear: right tbem (caso o float seja right), ou simplesmente 
+            <p class="destaque">clear: both;</p> que vai limpar tanto esquerda como direita, independente de onde o 
+            float esteja.<br>
+            - Posso fazer esse 'clear' direto no final da div com o pseudo-elemento
+            <b class="destaque">after</b>, segue exemplo na div class = grid abaixo.<br>
+
+
+
+        <br><br><br> 
+        <div class="limpaFloat"></div>
+        <br><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="blank">
+            Display in MDN.
+        </a><br><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats" target="blank">
+            Float in MDN.
+        </a><br><br>
+        
+        <div class="grid">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <p>Exemplo de um grid com padding interno e margin usando 
+            box-sizing: border-box; deixando tudo responsivo usando
+            porcentagem e criando uma grid, usando o pseudo-element after
+            para "limpar" o texto abaixo das imagens e 
+            deixando as imagens responsivas tbem.<br><br>
+       </p>
+       
+       <div class="grid2">
+           <div class="col2">
+               <div class="col-content">
+                   <img class="imgResponsiva" src="grid/1.JPG">
+               </div>
+            </div>
+            <div class="col2">
+                <div class="col-content">
+                    <img class="imgResponsiva" src="grid/2.JPG">
+                </div>
+            </div>
+            <div class="col2">
+                <div class="col-content">
+                    <img class="imgResponsiva" src="grid/3.JPG">
+                </div>
+            </div>
+            <div class="col2">
+                <div class="col-content">
+                    <img class="imgResponsiva" src="grid/4.JPG">
+                </div>
+            </div>
+            
+            
+       </div>
+       - Assim não é muito usado pois temos a <p class="destaque">flex-box</p>
+       ou a propriedade <p class="destaque">Display-grid</p><br>
+       - E para 'quebrar' as grids pra baixo ao ficarem mto pequenas, 
+       utilizamos<p class="destaque">BREAKPOINTS</p> que veremos mais a 
+       frente também. 
+    <br><br>
+    </div>
+    <hr>
+    <div id="coresBody" class="tituloDiv">
+        <h1>Cores HTML</h1><br><br>
+        <a href="https://www.w3schools.com/html/html_colors.asp" target="blank">
+            Cores in w3Schools
+        </a><br><br>
+        <a href="https://www.w3schools.com/colors/colors_picker.asp" target="blank">
+            seletor de cores HTML in w3Schools.
+        </a><br><br>
+        - Podemos setar a cor pelo nome dela, por valor hexadecimal, ou rgba.<br>
+        - Hexadecimal #FFFFFF significa que os dois primeiros FF são vermelho, 
+        os próximos 2 verde e os 2 ultimos azul. FF indica que ele ta ligado e 00 desligado.
+        podemos representar com apenas 3 0´s ou 3 f´s, (#0F0 - indica que só o azul está ligado #00FF00).
+        pois caso tenhamos um par de f ou 0 podemos representar com apenas 1 (respeitando o limite de 3 caracteres). <br>
+        - O hexadecimal é calculado com a seguinte 'régua': ABCDEF123456789.<br>
+        - A regua do rgba (onde a é sombra (opacidade), logo não é obrigatório usar) vai de 
+        0 a 255 (isso pra cada valor (r-vermelho, g-verde, b-blue)). no hexadecimal 
+        essa opacidade é adicionada somando-se mais um par de valores ao final (ficando com 8 #FFFFFF00)<br>
+        - A opacidade no rgba é representada por porcentagem (de 0 a 1), logo 0.75 é igual
+        a 75%.<br><br><br>
+        <h1>Textos HTML</h1><br><br>
+        - Aula 583 - 
+
+        <a href="https://www.w3schools.com/css/css_text.asp" target="blank">
+            Textos in w3Schools
+        </a><br><br>
+        p {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 20px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold; &nbsp;&nbsp; (aqui podemos setar valores de bold 100 - 400)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;directio: ltr; &nbsp;&nbsp; (left to rigth)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing: 5px; &nbsp;&nbsp; (espaço entre as letras)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;word-spacing: 5px; &nbsp;&nbsp; (espaço entre as palavras)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;line-height: 10px; &nbsp;&nbsp; (altura da linha)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-align: left; &nbsp;&nbsp; (alinhamento do exto)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: underline; 
+            &nbsp;&nbsp;&nbsp;&nbsp;text-ident: 50px; &nbsp;&nbsp; (Espaçamento de onde começa o paragráfo)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-transform: capitalize; &nbsp;&nbsp; (deixa a primeira letra de cada palavra maiúscula,
+            tudo maiúsculo = upercase, tudo min = lowercase)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text-shadow: -1px (direita(+) esquerda(-)) 1px(cima(+) baixo(-)) 1px (espalhamento da sombra (blur)) red (cor da sombra);<br>
+        }
+        <br><br>
+    </div>
+    <br><br><hr>
+    <div id="positionBody" class="tituloDiv">
+        <h1>Position</h1><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/position" target="blank">
+            Position in MDN
+        </a><br><br>
+        -<p class="destaque">Relative:</p> corresponde a sua posição em relação aos 
+        outros elementos, qualquer 'distancia' de top ou left que colocarmos, ele irá
+        se afastar do elemento mais próximo a ele.<br><br>
+        -<p class="destaque">Absolute:</p> Já a absolute é relativa a view port, ou a div/elemento
+        que esta 'em volta dela'. Ela (div ou elemento) deixa de ocupar
+        aquele espaço (que é prontamente assumido por outra div/elemento) e fica meio
+        que 'flutuando' na página, ficando por cima de qualquer elemento que tenha
+        o mesmo posicionamento que ela.<br>
+        - Caso eu queira posicionar algum elemento/div dentro do outro, posso colocar:<br>
+        div#interna {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;top: 50%;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;left: 50%;<br>
+        - porem assim a 'ponta' do elemento que ficaria no meio, e todo seu espaço a direita iria 'descentralizar',
+        para ajustar isso, vemos o tamanho do elemento e 'tiramos a metade' dele nas margins, ficando assim um elemento de 300px por ex.:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;margin-top: -150px;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;margin-left: -150px;<br>
+        }<br>
+        - Exemplo na div vermelha abaixo, e sua div interna 'branca'. A branca
+        tem 100px w/h, alinhamento top e left de 50% e margin t/l de 50px (metade do tamanho dela).<br>
+        - O posicionamento é definido no css com os atributos: <p class="destaque">
+            top, botton, right e leftt</p>, Como se fosse a magin.<br><br>
+        -<p class="destaque">Z-index:</p> Define quem vai ficar por cima de quem, quanto maior o valor 
+        maior a 'prioridade' de ficar 'por cima', tbem podemos colocar o z-index como -1, assim
+        ele vai 'pra trás' dos outros elementos.<br><br>
+        -<p class="destaque">Fixed:</p> O elemento fica 'preso/fixo' onde a gente mandar,
+        respeitando o top, botton, left etc que setarmos. ex div rubro-negra que vai pro topo.:<br><br>
+        -<p class="destaque">Sticky:</p> Deixa as coisas 'presas' onde vc mandar, geralmente com base
+        no atributo top: 0; Exemplo no menuSuperior.
+    <br><br>
+    <div class="posVermelha">
+        <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exemplo de div fixed.
+        <div class="posBranca"></div>
+    </div>
+    <div class="clear">
+        <p class="distanciaPos"></p>
+    </div>
+    <div class="posRubro"><a class="topoRubro" href="#vemTopo">topo</a></div>
+    <div class="posNegra"><a class="topoNegro" href="#vemTopo">topo</a></div>
+    <br><br>
+    <hr>
+    <div id="breakPointBody" class="tituloDiv">
+        <h1>Media Query and breakPoints</h1><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries" target="blank">
+            Media query in MDN
+        </a><br><br>
+        <a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp" target="blank">
+            Media rule css in w3Schools
+        </a><br><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger-API/Tutorial-Breakpoint" target="blank">
+            BreakPoints in MDN (set a breakpoint)
+        </a><br><br>
+        <p class="destaque">Breakpoints:</p> è o tamanho da tela do dispositivo, qndo eu quero saber o 
+        tamanho da tela para tratar o comportamento dos elementos com relação a ela.<br><br>
+        <p class="destaque">Media Query:</p> Coloco uma regra no css que se a tela chegar naquele tamanho
+        a div vai ter um comportamento. bem simples:<br> 
+        @media (max-widht: 320px {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;.break .colBreak {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        }<br><br>
+        - Um modo menos trabalhoso de se fazer isso é setar o @media p/ 800px (tamanho de tablet)
+        dai tudo que for menor que 800px (tablets e celulares) terão o comportamento dentro do<br>
+        @media (max-widht: 800px) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;.break .colBreak {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        }<br><br>
+        - para ter outro comportamento entre os tamanhos (tablet por exemplo) usamos o and.<br>
+        @media (min-width: 321px) and (max-width: 768px) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;.break .colBreak {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        }<br>
+        Os quadrados verdes tem 3 exemplos de tamanhos no css: desktop, tablet e celular.
+        <br><br>
+        
+        <p class="destaque">Observação:</p> Como estou fazendo e costumo fazer o site desktop pra depois
+        adequar ao mobile (responsividade), falamos que é <p class="destaque">desktop first</p>, e vice versa <br><br>
+        <div class="break">
+            <div class="colBreak">
+                <div class="colContentBreak"></div>
+            </div>
+            <div class="colBreak">
+                <div class="colContentBreak"></div>
+            </div>
+            <div class="colBreak">
+                <div class="colContentBreak"></div>
+            </div>
+            <div class="colBreak">
+                <div class="colContentBreak"></div>
+            </div>
+            <div class="colBreak">
+                <div class="colContentBreak"></div>
+            </div>
+            <div class="colBreak">
+                <div class="colContentBreak"></div>
+            </div>
+            <div class="clear"></div><br>
+            <p class="destaque">Box-radius e Box-shadow</p> - comentários e aplicação 
+            no css.
+        </div>
+    </div><br><br>
+    <hr>
+    <div id="flexBoxBody" class="tituloDiv">
+        <h1>FlexBox</h1><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox" target="blank">
+         Flexbox in MDN   
+        </a><br><br>
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="blank">
+            Guia CSS-Tricks   
+        </a><br><br>
+        Anotações aula 589: <br><br>
+        - Flex box = <p class="destaque">Caixa Flexivel.</p><br><br>
+        - Flex box é tipo uma 'manipulação' de caixas similar ao float do css porem direto no html<br><br>
+        - Imagem referencia dos 'Flex-itens' abaixo. <img src="flex_terms.png"><br><br>
+        - Nós 'ativamos' o flex-box definindo a propriedade de uma div (que é display block por padrão),
+        para <p class="destaque">display: flex;</p>. Qunado setamos isso, nós passamos a controlar o comportamento 
+        dos filhos da div.<br><br>
+        -<p class="destaque">flex-direction: row ou column;</p> Define a direção do 
+        eixo principal (main axis) e perpendicular (cross axis). E tipo como se fosse uma 
+        manipulação do display block e line (porem aqui ele sempre vai ser full-width)<br><br>
+        -<p class="destaque">Justify-content: </p> Alinha os itens internos no eixo principal (main axis). <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;: flex-start (esquerda pra direita) <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;: flex-end (direita para esquerda) <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;: space-around (deixa um espaço entre eles na direita e esquerda, tipo um padding 0px 20%) <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;: space-between (espaço entre cada item igualmente 'colando' o primeiro a esquerda e o ultimo a direita) <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;: space-evenly (similar ao space-around porem distribui o espaço igualitariamente). <br>
+        <br>-<p class="destaque">align-items: </p> Alinha os itens internos no eixo perpendicular (cross axis). <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; Também temos as propridades de alinhamento nas laterais, topo e botton e center. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;: baseline (Alinha delimitando uma linha na fonte dos itens internos,
+        mesmo que um seja maior que o outro.) <br><br>
+        -<p class="destaque">align-content:</p> Alinha o conteúdo dos itens.<br><br>
+        -<p class="destaque">flex-wrap: wrap; </p>Impede que um elemento sobreponha o outro ao diminuir a tela 
+        'quebrando a linha' do elemento ao ficar muito pequeno.<br><br>
+        - Para alinhar um elemento exatamente ao centro da tela, setamos as duas propriedades: 
+        (Justify-content e align-items como center). <br><br>
+        - Quase todas as propriedades de alinhamento tem as mesmas opções (flex-start, flex-end, center
+        space-around space-between etc). <br><br>         
+
+        <div class="flex-container">
+            <div class="flex-item">Um</div>
+            <div class="flex-item">Dois</div>
+            <div class="flex-item">Três</div>
+            <div class="flex-item">Quatro</div>
+            <div class="flex-item">Cinco</div>
+        </div><br><br>
+
+        - Podemos colocar um flex dentro do outro, tipo uma div que vai dentro da outra, dentro de outra
+         etc no site todo e tudo flex.<p class="destaque">ex do poder do fle abaixo</p>.<br><br>
+        
+        <div class="two-columns">
+            <div class="coluna"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                 Aspernatur quasi exercitationem quo adipisci a mollitia vitae,
+                  possimus qui non, cumque sit delectus culpa veniam ipsa reprehenderit.
+                   Aspernatur modi cum eaque!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                 Aspernatur quasi exercitationem quo adipisci a mollitia vitae,
+                  possimus qui non, cumque sit delectus culpa veniam ipsa reprehenderit.
+                   Aspernatur modi cum eaque!</p>
+            </div>
+            <div class="coluna">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Aspernatur quasi exercitationem quo adipisci a mollitia vitae,
+                 possimus qui non, cumque sit delectus culpa veniam ipsa reprehenderit.
+                  Aspernatur modi cum eaque!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                 Aspernatur quasi exercitationem quo adipisci a mollitia vitae,
+                  possimus qui non, cumque sit delectus culpa veniam ipsa reprehenderit.
+                   Aspernatur modi cum eaque!</p>
+                <div class="gallery">
+                    <div class="imagem"></div>
+                    <div class="imagem"></div>
+                    <div class="imagem"></div>
+                    <div class="imagem"></div>
+                    <div class="imagem"></div>
+                    <div class="imagem"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="gridBody" class="tituloDiv">
+        <h1>Grids =<p class="destaque"> Grade/Tabela</p></h1><br><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids" target="blank">
+         Grid in MDN   
+        </a><br><br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/grid" target="blank">
+            Grid in MDN 2   
+           </a><br><br>
+        <a href="https://www.w3schools.com/css/css_grid.asp" target="blank">
+            Grid in w3Schools   
+        </a><br><br>
+        <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="blank">
+            Grid in CSS-Tricks   
+        </a><br><br>
+
+        - Anotações aula 593.<br><br><br>
+        - As grids são parecidas com as flex-box com a propriedade display, mas a grid é 
+        propria pra criar grids/grades, similar a uma tabela.<br><br>
+        - Ao clicar em inspencionar no navegador, vai ter a palavra grid na frente da div, 
+        se clicarmos nela, vai ser mostrado a numeração das linhas e colunas.<br><br>
+        - A maior parte das anotações estão no CSS.<br><br>
+
+        <div class="sohGrid">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+
+        <br><br>
+        <p class="destaque">Exemplo de um 'micro site' responsivo usando grids para tratar as areas/posicionamentos 
+            cabeçalho, conteúdo, rodapé etc.
+        </p><br><br>
+
+        <div class="exemploCompletoGridBody">
+            <div class="containerGrid">
+                <div class="gridExemploCompleto">
+                    <div>
+                        <h3>Logo</h3>
+                        <span>Menu</span>
+                    </div>
+                    <div>
+                        <span>
+                            <ul>
+                                <li>Item1</li>
+                                <li>Item1</li>
+                                <li>Item1</li>
+                                <li>Item1</li>
+                                <li>Item1</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div>
+                        <h3>Olá Mundo!</h3><br>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Aspernatur quasi exercitationem quo adipisci a mollitia vitae,
+                         possimus qui non, cumque sit delectus culpa veniam ipsa reprehenderit.
+                          Aspernatur modi cum eaque!</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Aspernatur quasi exercitationem quo adipisci a mollitia vitae,
+                            possimus qui non, cumque sit delectus culpa veniam ipsa reprehenderit.
+                            Aspernatur modi cum eaque!</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Aspernatur quasi exercitationem quo adipisci a mollitia vitae,
+                            possimus qui non, cumque sit delectus culpa veniam ipsa reprehenderit.
+                            Aspernatur modi cum eaque!</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Aspernatur quasi exercitationem quo adipisci a mollitia vitae,
+                         possimus qui non, cumque sit delectus culpa veniam ipsa reprehenderit.
+                          Aspernatur modi cum eaque!</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Aspernatur quasi exercitationem quo adipisci a mollitia vitae,
+                            possimus qui non, cumque sit delectus culpa veniam ipsa reprehenderit.
+                            Aspernatur modi cum eaque!</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Aspernatur quasi exercitationem quo adipisci a mollitia vitae,
+                            possimus qui non, cumque sit delectus culpa veniam ipsa reprehenderit.
+                            Aspernatur modi cum eaque!
+                        </p>
+                    </div>
+                    <div><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Aspernatur quasi exercitationem quo adipisci a mollitia vitae,
+                        possimus qui non, cumque sit delectus culpa veniam ipsa reprehenderit.
+                        Aspernatur modi cum eaque!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <div id="landingPageBody" class="tituloDiv">
+        <h1>Landing-Page</h1><br><br>
+        <a href="#" target="blank">
+         Link para a landing-page   
+        </a><br><br>
+        <a href="https://codepen.io/luizomf/full/KKNwMeG" target="blank">
+         Codepen Luiz   
+        </a><br><br>
+        <a href="https://github.com/luizomf/landing-page-cursojs" target="blank">
+         GitHUb Luiz/landing-page   
+        </a><br><br>
+        <a href="https://www.svgbackgrounds.com" target="blank">
+         Background SVG - SENSACIONAL ISSO.   
+        </a><br><br>
+        <a href="https://undraw.co" target="blank">
+         Imagens SVG.   
+        </a><br><br>
+        <a href="https://source.unsplash.com/" target="blank">
+         Imagens aleatórias.   
+        </a><br>
+        <p class="destaque">https://source.unsplash.com/random/360x360</p> - nesse caso ele irá gerar imagens
+        aleatórias de 360x360px (cada vez que vc clicar nesse link ele gera
+        uma diferente)<br><br>
+        <a href="https://www.w3schools.com/cssref/css3_pr_transform.asp" target="blank">
+         Transform in w3Schools - para girar imagem, destorcer etc.   
+        </a><br><br>
+        - digita html code heart por exemplo no google dai copia o coração e cola na página que funciona kkkk<br><br>
+        <img src="ouTudoLuiz.JPG">
+    </div>
+
+    <hr>
+    <div id="videoFilipe" class="tituloDiv">
+        <h1>Dicas de estudo</h1><br><br>
+        <a href="https://pt.wikipedia.org/wiki/Neuroplasticidade" target="blank">
+            Neuroplasticidade  
+           </a><br><br>
+           <iframe width="1280" height="720" src="https://www.youtube.com/embed/ZtMzB5CoekE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div id="rodape"></div>
+</body>
+
+</html>

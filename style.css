@@ -1,0 +1,827 @@
+/* - Resetando o CSS (fazendo isso ja tira os estilos
+        das listas automáticamente) */
+* {
+    margin: 0;
+    padding: 0;
+    /*essa configuração é um 'reset de css'*/
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont,
+     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;
+    /*o box-sizing: border-box; quer dizer que o padding e margin,
+    vão pra fora do elemento ao invéz de vir pra dentro, preservando assim
+    o tamanho real de cada elemento.*/
+}
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+}
+.tituloDiv {
+    margin: 30px 0;
+    /*50px é referente ao eixo x (direita e esquerda)
+    e 0 referente ao eixo y (cima e baixo)*/
+    line-height: 18px;
+}
+.tituloDiv h2 {
+    font-family: -apple-system, BlinkMacSystemFont,
+     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+.tituloDiv p, h1, a, b, strong, h2, h3 {
+    padding-left: 10px;
+}
+.centro {
+    text-align: center;
+}
+.destaque {
+    display: inline;
+    font-size: 16px;
+    color: #ff06ac;
+}
+/* -------------- */
+
+#menuSuperior {
+    background: #c3281e;
+    height: 22px;
+}
+#menuSuperior a {
+    color: black;
+    transition: all 500ms ease-in-out;
+}
+#menuSuperior a:hover{
+    color: #ffffff;
+}
+#menuSuperior2 a:hover{
+    color: #ffffff;
+}
+#menuSuperior {
+    position: sticky;
+    top: 0;
+}
+#menuSuperior2 {
+    background: #c3281e;
+    height: 22px;
+}
+#menuSuperior2 a {
+    color: black;
+    transition: all 500ms ease-in-out;
+}
+#menuSuperior2 {
+    position: sticky;
+    top: 20px;
+}
+
+
+/* -----------------  */
+#bloco {
+    width: 180px;
+    height: 120px;
+    background: red;
+    margin-bottom: 100px;
+}
+#bloco2 {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background: yellow;
+}
+#bloco3 {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background: blue;
+}
+#bloco4 {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background: brown;
+}
+#bloco5 {
+    float: left;
+    width: 120px;
+    height: 60px;
+    background: purple;
+}
+p#paragraf {
+    width: 20px;
+    height: 20px;
+    background: darkcyan;
+}
+#netflixBody {
+    width: 100%;
+    height: 800px;
+    margin-bottom: 100px;
+    background-image: url(fundoNetflix.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+#heading {
+    background: rgba(0, 0, 0, 0.3);
+    /*display: flex; flex e grid são mto utilizados pra se fazer colunas*/
+    /*background: #e50914;*/
+    /*justify-content: center; caraio finalmente. alinhar todo o container usa essa bosta*/
+    /*justify-content: space-between; assim ele separa os conteudos*/
+}
+#heading div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    /*com width 80% e margin 0 (nesse caso vai ser 0 em cima e em baixo)
+    e auto (direita e esquerda respectivamente) eu deixo a margem e posicionamento
+    responsivo*/
+}
+#heading .h1 {
+    padding: 15px 0;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+#heading a {
+    color: #e50914;
+    font-family: sans-serif;
+}
+.exemplosBoxModel {
+    box-sizing: padding-box;
+    background: red;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 150px;
+    min-height: 100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 5px;
+    border: 2px solid black;
+    /*se não quiser passar direto assim,
+    podemos ajustar as propriedades individualmente
+    da borda, como border-width, border-color etc*/
+}
+.section-one {
+    margin: 70px;
+    width: 500px;
+    height: 220px;
+    background: deeppink;
+    background-image: url(fundo.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    border-style: solid;
+    border-width: 15px;
+    border-bottom-width: 50px;
+    border-bottom-color: gold;
+    border-top-color: red;
+    border-right-color: blue;
+    border-left-color: rgb(92, 76, 150);
+    padding: 50px 15px;
+}
+.section-one h4 {
+    color: #fff;
+}
+.section-two {
+    background: cyan;
+    width: 500px;
+    height: 100px;
+    border: 5px solid black;
+    padding: 15px;
+    margin: 50px;
+}
+#listasEMenusBody {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 10px;
+}
+
+/* ---------- Menu/submenu Luis otávio -------------- */
+
+.menu,
+.sub-menu {
+  margin: 0;
+  padding: 0;
+}
+.clearfix:after{
+  content: '.';
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+.menu,
+.sub-menu {
+  list-style: none;
+  background: #000;
+}
+.sub-menu {
+  background: #444;
+}
+.menu a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.menu li {
+  position: relative;
+}
+.menu > li {
+  float: left;
+}
+.menu > li:hover {
+  background: #444;
+}
+.menu li:hover > .sub-menu {
+  display: block;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+}
+
+.sub-menu li:hover {
+  background: #555;
+}
+
+.sub-menu .sub-menu {
+  top: 0;
+  left: 100%;
+}
+
+/* -------------------------------------------------- */
+
+#tabelasBody {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+nav {
+    display: flex;
+    background: grey;
+    justify-content: center;
+    align-items: center;
+    /*align-itens faz o alinhamento vertical e
+      justify... alinhamento horizontal
+      ambos só funcionam com o display: flex*/
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+.listas {
+    margin: 10px 30px;
+}
+.menu {
+    color: #fff;
+    font-family: -apple-system,
+        BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+    background: rgb(238, 111, 196);
+    padding: 10px 50px;
+    display: block;
+    /*aqui o display block do a 'empurra' o tamanho do nav para o dele
+        porem a altura (height) do nav não pode estar setada
+        senão ela que vai prevalecer e o display block do a 
+        não vai funcionar*/
+    text-transform: uppercase;
+}
+div#listasEMenusBody nav ul li a:hover {
+    background: grey;
+}
+#tabelasBody {
+    padding: 10px;
+    font-family: sans-serif;
+}
+table {
+    border-collapse: collapse;
+    /*esse 'colapse' tira o espaço entre colunas/linhas */
+    margin-left: 40px;
+    width: 90%;
+}
+table td,
+table th {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+table caption {
+    caption-side: top;
+    text-align: left;
+    font-style: italic;
+    font-size: 20px;
+    margin: 5px 0;
+}
+tfoot td,
+table th {
+    background: #ddd;
+}
+tfoot td {
+    font-style: italic;
+}
+.tabela2 {
+    width: 1500px;
+    margin-top: 30px;
+}
+.responsive-table {
+    max-width: 100%;
+    overflow-x: auto;
+}
+#formulariosBody {
+    margin: 50px 0;
+    padding: 10px;
+}
+
+#formulariosBody legend {
+    margin: 0 20px;
+}
+#formulariosBody input {
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont,
+     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;          
+}
+label {
+    cursor: pointer;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont,
+     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#digitaNome {
+    display: block;
+}
+
+fieldset {
+    margin: 0 20px;
+    padding: 20px;
+}
+.botao {
+    margin-top: 30px;
+    margin-right: 15px;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.botao:hover {
+    background: darkgray;
+}
+#seletores h2 {
+    text-align: center;
+}
+#seletores input {
+    font-size: 20px;
+}
+#seletores input:focus {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    outline: none;
+    border: 1px solid black;
+}
+#seletores input:disabled {
+    cursor: not-allowed;
+}
+#seletores p#mudaTamanho input:checked {
+    width: 50px;
+    height: 50px;
+}
+#seletores input:required {
+    background: rgb(190, 190, 255);
+}
+input:checked + b {
+    background: red;
+}
+/*pseudo-classe que pega apenas o ultimo filho, se eu quisesse
+só o primeiro digitaria :first-child*/
+.pai .lista li:last-child {
+    background: red;
+}
+.pai {
+    padding: 20px;
+}
+/*o not é a negação do normal, funciona em outras pseudo-classes tbem 
+exemplo na div #alternaCorChequed*/
+#notMeio p:not(.meio) {
+    color: blue;
+}
+#alternaCorChequed input:not(:checked) + b {
+    background: yellow;
+}
+#pseudoElements h3 {
+    color: rgb(45, 83, 70);
+}
+#pseudoElements p {
+    font-size: 22px;
+}
+
+#pseudoElements p::first-letter {
+    font-size: 100px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+#pseudoElements p::selection {
+    background: black;
+    color: rgb(211, 27, 27);
+}
+#pseudoElements ::placeholder {
+    color: purple;
+}
+#pseudoElements b#maior {
+    font-size: 22px;
+}
+#rodape {
+    margin: 50px 0;
+}
+#herancaBody {
+    margin: 50px 0;
+}
+.grid .col {
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 20px;
+    float: left;    
+}
+.limpaFloat {
+    clear: both;
+} /*Aqui um exemplo para limpar o 
+    próximo elemento com float
+    left e display block*/
+.imgFloat {
+    display: block;
+    float: left;
+}
+.col:hover {
+    background: aqua;
+    border: 2px solid blue;
+    cursor: pointer;
+}
+.grid::after {
+    content: '';
+    display: block;
+    clear: both;
+} /*Aqui um exemplo de limpar com o pseudo-elemento after.
+    A classe grid (que é uma div) ja tem o display block por
+    padrão e o float left (esses 3 elementos funcionam em 
+    conjunto (display-block, float e clear both)*/
+
+/*'encaixando' tudo no layout*/
+.grid2 {
+    box-sizing: border-box;
+    padding: 15px;
+}
+.grid2::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.grid2 .col2 {
+    box-sizing: border-box;
+    width: 50%;
+    height: 300px;
+    float: left;
+    padding: 15px;
+    
+}
+.grid2 .col-content {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+.imgResponsiva {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#coresBody, #positionBody, #displayFloatBody, #pseudoElements,
+#seletores, #boxModelBody, #breakPointBody {
+    padding: 15px;
+}
+
+.posVermelha {
+    width: 300px;
+    height: 300px;
+    background: red;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    margin-bottom: 30px;
+    float: left;
+}
+
+.posBranca {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+.posRubro {
+    width: 50px;
+    height: 25px;
+    background: #c3281e;
+    position: fixed;
+    top: 95%;
+    right: 5%;
+    z-index: 1;
+}
+.posNegra {
+    width: 50px;
+    height: 25px;
+    background: black;
+    position: fixed;
+    top: 92.5%;
+    right: 5%;
+    z-index: 1;
+}
+.topoRubro {
+    color: black;
+    padding: 0 7px;
+} 
+.topoNegro {
+    color: #c3281e;
+    padding: 0 7px;
+} 
+/*------------------*/
+
+.break .colBreak {
+    height: 300px;
+    float: left;
+    padding: 15px;
+}
+.break .colContentBreak {
+    width: 100%;
+    height: 100%;    
+    background: green;
+    border-radius: 10px 10px 10px 10px;
+    /*para criar circulos o elemento tem que ser quadrado e 
+    dai coloca o border-radius: 50%; */
+    box-shadow: 15px 15px 10px 0 rgba(172, 255, 47, 0.726);
+    /*4 parametros + a cor
+    1-direita (+) esquerda (-)
+    2-cima (+) baixo (-)
+    3-Blur
+    4-Espalhamento
+    a opção inset, manda a borda pra dentro: box-shadow: inset 0 0 0 0 cor;
+    posso colocar uma virgula após a cor e passar os 4 parametros novamente
+    para colocar mais uma borda em outra direção*/
+}
+
+@media (max-width: 568px) { 
+    /*O que estiver aqui dentro só vai ser executado
+    caso essa condição seja verdadeira, ou seja, a tela menor que 320px*/
+    .break .colBreak {
+        width: 100%;
+    }
+}
+
+@media (min-width: 569px) and (max-width: 768px) {
+    .break .colBreak {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .break .colBreak {
+        width: 33.33%;
+    }
+}
+
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ----Flex-box----- */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: nowrap; /*wrap - utiliza o espaço todo
+                        nowrap - utiliza o espaço que vc esta pedindo
+    tambem podemos usar atalho aqui como exemplo abaixo.
+    flex-flow: row nowrap;*/
+    background: yellow;
+    height: 200px;
+}
+.flex-item {
+    /*flex-grow: 1;
+    /*determina que os elementos 'distribuem' o espaço restande deles*/
+    /*flex-basis: 320px; /*Tela de iphone
+    Determina que cada elemento vai começar com 320px e após isso ele ocupa 
+    o restante do espaço. o espaço 'excedente' ele vai dividindo entre
+    os elementos, ate ter outro espaço de 320px que ele consiga 
+    acomodar + 1 elemento.*/
+    /*flex-shrink: 0; /*Contrário do grow, ele não deixa que os elementos
+    diminuam (coloca overflow na página)*/
+    flex: 1 1 320px; /*Atalho. onde 1º valor = grow, 2º = shrink e 3º basis*/
+    /*height: 60px;*/
+    color: #ccc;
+    background: red;
+    margin: 10px;
+}
+/*posso alinhar/tratar cada filho individualmente, como exemplo abaixo.*/
+.flex-item:nth-child(3) {
+    /*Com essa propriedade estamos pegando o 3º filho da div (flex-container)*/
+    font-size: 30px;
+    align-self: flex-end;
+    height: 60px;
+}
+.flex-item:nth-child(5) {
+    align-self: center;
+}
+.flex-item:nth-child(1) {
+    align-self: stretch;
+}
+
+/* ----- ex do poder do flex ----*/
+
+.two-columns p {
+    margin: 0 0 24px;
+}
+
+.two-columns {
+    /*aqui o main axis esta na horizontal (que é o padrão)
+    por isso temos uma linha e duas colunas*/
+    display: flex;
+}
+
+.two-columns .coluna {
+    display: flex;
+    flex-direction: column;
+    /*aqui nós mudamos a direção do main axis, colocando ele na vertical
+    por isso temos só uma coluna com duas linhas*/
+    background: lawngreen;
+    margin: 15px;
+    padding: 30px;
+}
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+}
+.gallery .imagem {
+    /*width: 100%; - poderia ser assim mas vamos usar a propriedade flex como abaixo*/
+    flex: 1 0 20%;
+    /*ao expandir a tela vemos o comportamento de ocupar os espaços setados acima*/
+    height: 50px;
+    background: blue;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* ---- Grids ---- */
+
+.sohGrid {
+    display: grid;
+    /* grid-template-columns: 50% 50%; */
+    /*Aqui determinamos o nº de colunas*/
+    gap: 10px;
+    /*gap é tipo uma margem, mas alguns navegadores podem não reconhecer
+    dai as vezes é melhor usar a margin mesmo.
+    setar isso sem configurar pode deixar overflow na página também - uma opção é
+    ao invés de usar porcentagem usar 'fragmentos'*/
+    /* grid-template-columns: 200px 2fr 1fr; */
+
+    /*podemos setar o tamanho de alguma coluna (absoluto) como fizemos acima ou
+    setar tamanhos exatos para cada coluna usanso apenas fragmentos, como abaixo*/
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+    /*Podemos determinar o tamanho da grid e alinha-la ao centro setando as configs abaixo*/
+    /* Dessa forma pode ficar um pouco custoso/trabalhoso caso tenhamos 10 ou mais 
+    colunas por exemplo, para isso podemos usar o repeat(com o numero de coluans que 
+    queremos, tamanho de cada coluna); */
+    /* grid-template-columns: repeat(10, 1fr);
+
+    /* ainda podemos repetir colunas com tamanhos diferentes, conforma abaixo.
+    grid-template-columns: repeat(3, 1fr 3fr); */
+
+    /*só melhora rs, para setar tamanho minimo e max (para ajustar responsividade)
+    poderiamos usar media query ou simplesmente usar o atributo da grid como abaixo*/
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    /* max-width: 600px; */
+
+    /*da mesma forma que tratamos as colunas podemos tratar as linhas*/
+    grid-template-rows: 2fr 1fr 3fr;
+    margin: 0 auto;
+}
+.sohGrid div {
+    background: tomato;
+    min-height: 50px;
+}
+/*Podemos também tratar só os 'filhos' caso queiramos que ele oculpe mais linhas
+ou colunas, conforme exemplo abaixo*/
+.sohGrid div:nth-child(5) {
+    background: grey;
+
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 6; 
+    podemos usar um atalho aqui tbem, só atentar que nesse caso ele usa a / para
+    separar os valores (inicio e fim no caso)
+    grid-column: 2 / 6;
+    tem outro atalho 'geral' que a sintaxe é: linha inicio / coluna inicio / 
+    linha fim / coluna fim.
+    grid-area: 2 / 1 / 6 / 4; */
+
+    /*Posso fazer conforme acima ou tratar o span da grid como abaixo*/
+
+    grid-row: span 2;
+    grid-column: span 2;
+    /*Dessa forma não agride tanto a estrutura*/
+
+    /*Podemos usar o @media junto com o span para controlar o tamanho junto
+    com a responsividade*/
+}
+@media (max-width: 600px) {
+    .sohGrid div::nth-child(5) {
+        grid-column: span 1;
+    }
+}
+/*podemos nomear as colunas usando os [] dai depois ao invés de usar o 
+start/end com o número da coluna, tratamos pelo nome (como se fosse uma variável)
+ex.: grid-template-rows: [um] 1fr [dois] 2fr;*/
+
+/* --- exemploCompletoGridBody --- */
+
+.containerGrid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.gridExemploCompleto {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    /*deixando as linhas com o tamnho auto, elas se ajustam ao conteúdo.*/
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+    'header header' /*repetimos os valores para que o filho 1 ocupe as duas colunas
+                        como se fosse 'parametros'*/
+    'nav main'
+    'rodape rodape';
+}
+.gridExemploCompleto div:nth-child(1){
+    grid-area: header;
+    /*definindo o nome do filho 1*/
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gridExemploCompleto div:nth-child(2){
+    grid-area: nav;
+    background: yellow;
+}
+.gridExemploCompleto div:nth-child(3){
+    grid-area: main;
+    background: violet;
+}
+.gridExemploCompleto div:nth-child(4){
+    grid-area: rodape;
+    background: turquoise;
+}
+.gridExemploCompleto li {
+    list-style: none;
+}
+
+#videoFilipe iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    /*Ate 600px eu não quero que a configuração do filho 1 seja aplicada.*/
+    .gridExemploCompleto {
+        display: grid;
+        grid-template-rows: auto;
+        /*deixando as linhas com o tamnho auto, elas se ajustam ao conteúdo.*/
+        grid-template-columns: auto;
+        grid-template-areas: 
+        'header' /*abaixo de 600px eu deixo apenas uma coluna no header*/ 
+        'nav' /*idem para o menu e conteúdo (main)*/
+        'main'
+        'rodape';
+    } 
+}
+
+/* ------------------- */
